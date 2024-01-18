@@ -18,7 +18,8 @@ format:
     code-line-numbers: true
     css:
       - https://mafritz.ch/slides/assets/dist/theme/maf.css
-      - custom/custom_quarto.css
+      - custom/custom_revealjs.css
+    js: https://kit.fontawesome.com/ac5eb0c407.js
 editor: visual
 self-contained: true
 execute: 
@@ -33,6 +34,14 @@ bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
 ---
 
+```{r set-up}
+library(here)
+library(knitr)
+
+source(here::here("custom/custom_script.R"), local = knitr::knit_global(), encoding = "UTF-8")
+
+```
+
 ## Quarto
 
 Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
@@ -41,16 +50,17 @@ Quarto enables you to weave together content and executable code into a finished
 
 When you click the **Render** button a document will be generated that includes:
 
--   Content authored with markdown
--   Output from executable code
+1.  Content authored with markdown
+2.  Output from executable code
 
 ## Code
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
-```{r}
+```{r example}
 #| echo: true
 #| eval: false
+
 1 + 1
 12 + 4
 ```

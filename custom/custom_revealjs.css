@@ -1,4 +1,11 @@
-.reveal .slides h1.title {
+.reveal .slides .title {
   font-size: 2.5em;
   font-weight: 900;
+}
+
+.reveal .slides ul li {
+  list-style: none;
+  list-style-type: disc;
+  list-style-image: none;
+  border: none;
 }

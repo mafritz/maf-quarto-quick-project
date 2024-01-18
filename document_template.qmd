@@ -9,14 +9,15 @@ lang: en
 linestretch: 1.15
 format:
   html:
-    theme: yeti # Voir https://quarto.org/docs/output-formats/html-themes.html pour les options
+    theme: default # Voir https://quarto.org/docs/output-formats/html-themes.html pour les options
     css: custom/custom_html.css 
     fontsize: 1.2rem
     linestretch: 1.5
     toc: true
     toc-location: left
     number-sections: true
-    title-block-banner: true
+    title-block-banner: "#970000"
+    title-block-banner-color: white
     smooth-scroll: true
     anchor-sections: false
     link-external-icon: true
@@ -49,7 +50,32 @@ abstract: |
   This is the abstract of the document.
 ---
 
-## What happens...
+```{r set-up}
+library(here)
+library(knitr)
 
-Let's see how it renders
+source(here::here("custom/custom_script.R"), local = knitr::knit_global(), encoding = "UTF-8")
+```
 
+## Quarto
+
+Quarto enables you to weave together content and executable code into a document.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r example}
+#| echo: true
+#| eval: false
+
+1 + 1
+12 + 4
+```
