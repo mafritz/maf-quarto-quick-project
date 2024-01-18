@@ -1,0 +1,41 @@
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{4}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+
+\usepackage{fontspec}
+
+\usepackage{lmodern} % Latin Modern fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+
+\usepackage{fancyhdr}
+\usepackage{truncate}
+\pagestyle{fancy}
+
+% Clear the header and footer
+\fancyhf{}
+
+% Define the header
+\fancyhead[L]{\footnotesize\truncate{0.48\headwidth}\leftmark}
+\fancyhead[R]{\footnotesize\truncate{0.48\headwidth}\rightmark}
+
+% Define the footer
+\fancyfoot[C]{\thepage}
+
+\usepackage[font=small,labelfont=bf,width=0.8\textwidth]{caption}
+
+\usepackage{etoolbox}
+\ifundef{\abstract}{}{\patchcmd{\abstract}%
+    {\quotation}{\quotation\noindent\ignorespaces}{}{}}

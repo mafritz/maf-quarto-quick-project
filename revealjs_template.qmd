@@ -1,0 +1,56 @@
+---
+title: "The maint title goes here"
+# subtitle: "A subtitle goes here"
+# date: last-modified
+author: "Mattia A. Fritz"
+institute: "TECFA, Université de Genève"
+lang: "fr"
+format: 
+  revealjs:
+    chalkboard: false
+    controls: true
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: c
+    numbers: true
+    menu: false
+    center: false
+    code-line-numbers: true
+    css:
+      - https://mafritz.ch/slides/assets/dist/theme/maf.css
+      - custom/custom_quarto.css
+editor: visual
+self-contained: true
+execute: 
+  echo: false
+  include: true
+  output: true
+code:
+  code-copy: true
+  code-line-numbers: true
+code-annotations: hover
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#| echo: true
+#| eval: false
+1 + 1
+12 + 4
+```

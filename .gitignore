@@ -47,3 +47,8 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Output _template
+*_template.pdf
+*_template.html
+*_template.docx

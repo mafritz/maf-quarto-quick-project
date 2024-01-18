@@ -1,0 +1,55 @@
+---
+title: "Your Document Title"
+author: 
+  - name: "Mattia A. Fritz"
+    affiliation: "Université de Genève"
+date: last-modified
+date-format: DD/MM/YYYY
+lang: en
+linestretch: 1.15
+format:
+  html:
+    theme: yeti # Voir https://quarto.org/docs/output-formats/html-themes.html pour les options
+    css: custom/custom_html.css 
+    fontsize: 1.2rem
+    linestretch: 1.5
+    toc: true
+    toc-location: left
+    number-sections: true
+    title-block-banner: true
+    smooth-scroll: true
+    anchor-sections: false
+    link-external-icon: true
+    embed-resources: true
+    fig-format: svg
+  docx:
+    toc: true
+    number-sections: true
+    highlight-style: github
+  pdf:
+    documentclass: article
+    fontsize: 11pt
+    number-sections: true
+    papersize: A4
+    toc: false
+    toc_depth: 1
+    number_sections: true
+    latex_engine: xelatex
+    extra_dependencies: ["flafter"]
+    includes:
+      in_header: "preamble.tex"
+editor: visual
+execute: 
+  echo: false
+  warning: false
+  error: false
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+abstract: |
+  This is the abstract of the document.
+---
+
+## What happens...
+
+Let's see how it renders
+
